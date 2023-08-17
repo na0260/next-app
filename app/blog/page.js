@@ -7,7 +7,7 @@ const Page = async () => {
         <div className="container mx-auto mt-20">
             <div className="row">
                 <div className="col-12">
-                    <h1 className="text-center font-bold pb-16">This is Blogs Page</h1>
+                    <h1 className="text-center text-2xl font-bold pb-16">This is Blogs Page</h1>
                     {
                         posts.map((post) => {
                             return (

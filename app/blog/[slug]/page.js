@@ -7,7 +7,7 @@ const Page = async ({params}) => {
         <div className="container mx-auto mt-20">
             <div className="row">
                 <div className="col-12">
-                    <h1 className="text-center pb-10">{post.title}</h1>
+                    <h1 className="text-center font-bold text-xl pb-10">{post.title}</h1>
                     <p>{post.body}</p>
                 </div>
             </div>
