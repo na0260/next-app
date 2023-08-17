@@ -1,4 +1,5 @@
 import getSinglePost from "@/utils/getSinglePost";
+import getAllPosts from "@/utils/getAllPosts";
 
 const Page = async ({params}) => {
     const id = params.slug;
@@ -14,5 +15,12 @@ const Page = async ({params}) => {
         </div>
     );
 };
+
+export async function generateStaticParams() {
+    const posts = await getAllPosts();
+    return posts.map((post) => ({
+        slug: ""+post.id,
+    }));
+}
 
 export default Page;
