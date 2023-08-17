@@ -1,5 +1,6 @@
 import getSinglePost from "@/utils/getSinglePost";
 import getAllPosts from "@/utils/getAllPosts";
+import PostComments from "@/app/components/PostComments";
 
 const Page = async ({params}) => {
     const id = params.slug;
@@ -10,6 +11,7 @@ const Page = async ({params}) => {
                 <div className="col-12">
                     <h1 className="text-center font-bold text-xl pb-10">{post.title}</h1>
                     <p>{post.body}</p>
+                    <PostComments/>
                 </div>
             </div>
         </div>
