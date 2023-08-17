@@ -4,6 +4,7 @@ import PostComments from "@/app/components/PostComments";
 import getPostComments from "@/utils/getPostComments";
 import {Suspense} from "react";
 
+export const dynamicParams = false;
 const Page = async ({params}) => {
     const id = params.slug;
     //waterfall fetch
