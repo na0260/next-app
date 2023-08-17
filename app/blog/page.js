@@ -4,7 +4,7 @@ import Link from "next/link";
 const Page = async () => {
     const posts = await getAllPosts();
     return (
-        <div className="container mx-auto mt-20">
+        <div className="container mx-auto mt-5">
             <div className="row">
                 <div className="col-12">
                     <h1 className="text-center text-2xl font-bold pb-16">This is Blogs Page</h1>
@@ -12,7 +12,7 @@ const Page = async () => {
                         posts.map((post) => {
                             return (
                                 <Link key={post.id} href={`/blog/${post.id}?_title=${post.title}`}>
-                                    <p className="font-bold">
+                                    <p className="font-bold pb-4">
                                         {post.id} - {post.title}
                                     </p>
                                 </Link>

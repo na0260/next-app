@@ -21,12 +21,12 @@ const Page = async ({params}) => {
     const commentsPromise = getPostComments(id);
 
     return (
-        <div className="container mx-auto mt-20">
+        <div className="container mx-auto mt-5">
             <div className="row">
                 <div className="col-12">
-                    <h1 className="text-center font-bold text-xl pb-10">{post.title}</h1>
+                    <h1 className="text-center font-bold text-4xl pb-10">{post.title}</h1>
                     <p>{post.body}</p>
-                    <Suspense fallback={<h1 className="mt-5">Loading Comments.....</h1>}>
+                    <Suspense fallback={<h1 className="mt-5 font-bold">Loading Comments.....</h1>}>
                         <PostComments commentPromise={commentsPromise}/>
                     </Suspense>
                 </div>
