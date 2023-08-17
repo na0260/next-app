@@ -18,14 +18,15 @@ const Page = async ({params}) => {
     //incremental fetch (Best Practice)
     const post = await getSinglePost(id);
     const commentsPromise = getPostComments(id);
+
     return (
         <div className="container mx-auto mt-20">
             <div className="row">
                 <div className="col-12">
                     <h1 className="text-center font-bold text-xl pb-10">{post.title}</h1>
                     <p>{post.body}</p>
-                    <Suspense fallback={<h1>Loading Comments.....</h1>}>
-                        <PostComments {/*comments={comments}*/} comments={commentsPromise}/>
+                    <Suspense fallback={<h1 className="mt-5">Loading Comments.....</h1>}>
+                        <PostComments commentPromise={commentsPromise}/>
                     </Suspense>
                 </div>
             </div>
